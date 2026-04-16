@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.displaytuner" path="/org/gnome/shell/extensions/displaytuner/">
+    
+    <key name="profiles" type="s">
+      <default>'{}'</default>
+      <summary>JSON Dictionary of Monitor Profiles</summary>
+    </key>
+
+    <key name="target-connector" type="s">
+      <default>'primary'</default>
+      <summary>Currently selected connector in settings</summary>
+    </key>
+
+    <key name="global-enable" type="b">
+      <default>true</default>
+      <summary>Enable or disable all padding</summary>
+    </key>
+
+    <key name="shortcut-dim-up" type="as">
+      <default>['&lt;Super&gt;&lt;Shift&gt;Up']</default>
+      <summary>Shortcut to increase brightness</summary>
+    </key>
+    
+    <key name="shortcut-dim-down" type="as">
+      <default>['&lt;Super&gt;&lt;Shift&gt;Down']</default>
+      <summary>Shortcut to decrease brightness</summary>
+    </key>
+
+  </schema>
+</schemalist>

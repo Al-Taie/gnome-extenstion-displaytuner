@@ -1,10 +1,15 @@
 {
-  "name": "Screen Padding",
-  "description": "Adds physical padding to the screen, forcing maximized windows to respect the new margins.",
-  "uuid": "screenpadding@al-taie.fedora",
+  "uuid": "displaytuner@al-taie.fedora",
+  "name": "Display Tuner",
+  "description": "Adjust physical screen margins and software brightness per monitor.",
   "shell-version": [
-    "49"
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
   ],
   "url": "",
-  "settings-schema": "org.gnome.shell.extensions.screenpadding"
+  "settings-schema": "org.gnome.shell.extensions.displaytuner"
 }
