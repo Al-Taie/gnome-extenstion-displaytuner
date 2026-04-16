@@ -10,6 +10,7 @@
     "49",
     "50"
   ],
-  "url": "",
+  "url": "https://github.com/Al-Taie/gnome-extenstion-displaytuner",
+  "version": 5,
   "settings-schema": "org.gnome.shell.extensions.displaytuner"
 }
