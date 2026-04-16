@@ -18,13 +18,13 @@
     </key>
 
     <key name="shortcut-dim-up" type="as">
-      <default>['&lt;Super&gt;&lt;Shift&gt;Up']</default>
-      <summary>Shortcut to increase brightness</summary>
+      <default>['&lt;Shift&gt;XF86MonBrightnessUp']</default>
+      <summary>Shortcut to increase software brightness (default: Shift+BrightnessUp)</summary>
     </key>
     
     <key name="shortcut-dim-down" type="as">
-      <default>['&lt;Super&gt;&lt;Shift&gt;Down']</default>
-      <summary>Shortcut to decrease brightness</summary>
+      <default>['&lt;Shift&gt;XF86MonBrightnessDown']</default>
+      <summary>Shortcut to decrease software brightness (default: BrightnessDown)</summary>
     </key>
 
   </schema>
