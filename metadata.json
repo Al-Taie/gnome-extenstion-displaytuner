@@ -1,0 +1,10 @@
+{
+  "name": "Screen Padding",
+  "description": "Adds physical padding to the screen, forcing maximized windows to respect the new margins.",
+  "uuid": "screenpadding@al-taie.fedora",
+  "shell-version": [
+    "49"
+  ],
+  "url": "",
+  "settings-schema": "org.gnome.shell.extensions.screenpadding"
+}

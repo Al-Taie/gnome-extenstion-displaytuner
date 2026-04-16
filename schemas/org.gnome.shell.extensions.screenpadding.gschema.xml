@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.screenpadding" path="/org/gnome/shell/extensions/screenpadding/">
+    
+    <key name="target-connector" type="s">
+      <default>'primary'</default>
+      <summary>Target Monitor Connector Name</summary>
+    </key>
+
+    <key name="brightness" type="i">
+      <default>100</default>
+      <summary>Software Brightness (10 to 100)</summary>
+    </key>
+
+    <key name="padding-left" type="i">
+      <default>0</default>
+      <summary>Left Padding in Pixels</summary>
+    </key>
+    
+    <key name="padding-right" type="i">
+      <default>0</default>
+      <summary>Right Padding in Pixels</summary>
+    </key>
+
+    <key name="padding-top" type="i">
+      <default>0</default>
+      <summary>Top Padding in Pixels</summary>
+    </key>
+
+    <key name="padding-bottom" type="i">
+      <default>0</default>
+      <summary>Bottom Padding in Pixels</summary>
+    </key>
+
+  </schema>
+</schemalist>
