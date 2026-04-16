@@ -3,6 +3,8 @@
 A per-monitor **software dimmer and screen-padding** extension for GNOME Shell.  
 Designed for setups where you want to use an external display (e.g. a large TV) alongside your laptop screen, without touching hardware settings.
 
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/a7e7b66b-e8ca-495d-97d4-1ece840b0e45" />
+
 ---
 
 ## Features
