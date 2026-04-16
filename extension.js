@@ -73,6 +73,27 @@ export default class ScreenPadExtension extends Extension {
         );
         Main.panel.statusArea.quickSettings.addExternalIndicator(this._indicator);
 
+        // Make the toggle span both columns (full width) in the QS grid
+        let toggle = this._indicator.quickSettingsItems[0];
+        let _trySetFullWidth = () => {
+            try {
+                let parent = toggle.get_parent();
+                if (!parent?.layout_manager) return false;
+                let meta = parent.layout_manager.get_child_meta(parent, toggle);
+                if (meta) { meta.column_span = 2; return true; }
+            } catch (_) { }
+            return false;
+        };
+        if (!_trySetFullWidth()) {
+            // Deferred: wait for the async grid setup in GNOME 49+
+            this._fullWidthId = toggle.connect('notify::parent', () => {
+                if (_trySetFullWidth() && this._fullWidthId) {
+                    toggle.disconnect(this._fullWidthId);
+                    this._fullWidthId = null;
+                }
+            });
+        }
+
         // Feature 1+5 – Hotkeys for brightness (OSD shown inside handler)
         Main.wm.addKeybinding(
             'shortcut-dim-up',
@@ -311,6 +332,10 @@ export default class ScreenPadExtension extends Extension {
 
         // Remove Quick Settings indicator and its pills
         if (this._indicator) {
+            if (this._fullWidthId) {
+                this._indicator.quickSettingsItems?.[0]?.disconnect(this._fullWidthId);
+                this._fullWidthId = null;
+            }
             this._indicator.quickSettingsItems?.forEach(item => item.destroy());
             this._indicator.destroy();
             this._indicator = null;
